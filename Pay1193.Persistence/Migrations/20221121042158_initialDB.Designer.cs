@@ -12,8 +12,8 @@ using Pay1193.Persistence;
 namespace Pay1193.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221014022258_AddPhoneColumnToEMployee")]
-    partial class AddPhoneColumnToEMployee
+    [Migration("20221121042158_initialDB")]
+    partial class initialDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -82,7 +82,6 @@ namespace Pay1193.Persistence.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("MiddleName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NationalInsuranceNo")
