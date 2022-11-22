@@ -12,7 +12,7 @@ using Pay1193.Persistence;
 namespace Pay1193.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221121042158_initialDB")]
+    [Migration("20221121082943_initialDB")]
     partial class initialDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -167,6 +167,9 @@ namespace Pay1193.Persistence.Migrations
 
                     b.Property<int>("TaxYearId")
                         .HasColumnType("int");
+
+                    b.Property<decimal>("TotalDeduction")
+                        .HasColumnType("money");
 
                     b.Property<decimal>("TotalEarnings")
                         .HasColumnType("money");

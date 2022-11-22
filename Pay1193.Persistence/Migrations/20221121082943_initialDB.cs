@@ -75,6 +75,7 @@ namespace Pay1193.Persistence.Migrations
                     UnionFee = table.Column<decimal>(type: "money", nullable: false),
                     SLC = table.Column<decimal>(type: "money", nullable: true),
                     TotalEarnings = table.Column<decimal>(type: "money", nullable: false),
+                    TotalDeduction = table.Column<decimal>(type: "money", nullable: false),
                     EarningDeduction = table.Column<decimal>(type: "money", nullable: false),
                     NetPayment = table.Column<decimal>(type: "money", nullable: false)
                 },

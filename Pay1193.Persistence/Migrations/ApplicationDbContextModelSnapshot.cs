@@ -166,6 +166,9 @@ namespace Pay1193.Persistence.Migrations
                     b.Property<int>("TaxYearId")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("TotalDeduction")
+                        .HasColumnType("money");
+
                     b.Property<decimal>("TotalEarnings")
                         .HasColumnType("money");
 

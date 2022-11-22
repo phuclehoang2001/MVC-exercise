@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yRbiJ+sx63SLsVB+2zVStGhBPUsTL09TNC0VyizZSxQ=",
+  "Hash": "ojeQtiSGUEDnR5y4Ff2Jsh+EJY4eG0l/30EYJZQdiMs=",
   "Source": "Pay1193",
   "BasePath": "_content/Pay1193",
   "Mode": "Default",
@@ -119,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\images\\Emp.gif"
     },
     {
+      "Identity": "E:\\document\\MVC\\Excersice\\payment\\MVC-exercise\\Pay1193\\wwwroot\\images\\employees\\220531823_your bby gurl_ on TikTok.jfif",
+      "SourceId": "Pay1193",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\document\\MVC\\Excersice\\payment\\MVC-exercise\\Pay1193\\wwwroot\\",
+      "BasePath": "_content/Pay1193",
+      "RelativePath": "images/employees/220531823_your bby gurl_ on TikTok.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\employees\\220531823_your bby gurl_ on TikTok.jfif"
+    },
+    {
       "Identity": "E:\\document\\MVC\\Excersice\\payment\\MVC-exercise\\Pay1193\\wwwroot\\images\\employees\\221450547human.jpg",
       "SourceId": "Pay1193",
       "SourceType": "Discovered",
@@ -134,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\employees\\221450547human.jpg"
+    },
+    {
+      "Identity": "E:\\document\\MVC\\Excersice\\payment\\MVC-exercise\\Pay1193\\wwwroot\\images\\employees\\222857526ava.jpg",
+      "SourceId": "Pay1193",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\document\\MVC\\Excersice\\payment\\MVC-exercise\\Pay1193\\wwwroot\\",
+      "BasePath": "_content/Pay1193",
+      "RelativePath": "images/employees/222857526ava.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\employees\\222857526ava.jpg"
     },
     {
       "Identity": "E:\\document\\MVC\\Excersice\\payment\\MVC-exercise\\Pay1193\\wwwroot\\images\\employees\\224107953human.jpg",

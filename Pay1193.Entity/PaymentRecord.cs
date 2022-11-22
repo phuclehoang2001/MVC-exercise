@@ -46,6 +46,8 @@ namespace Pay1193.Entity
         [Column(TypeName = "money")]
         public decimal TotalEarnings { get; set; }
         [Column(TypeName = "money")]
+        public decimal TotalDeduction { get; set; }
+        [Column(TypeName = "money")]
         public decimal EarningDeduction { get; set; }
         [Column(TypeName = "money")]
         public decimal NetPayment { get; set; }
