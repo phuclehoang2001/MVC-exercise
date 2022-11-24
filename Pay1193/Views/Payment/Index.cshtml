@@ -13,15 +13,11 @@
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">Payment List</li>
                 </ol>
-                            <select class="form-control">
-                            @foreach (var item in Model)
-                                    {
-                                            <option>@item.Emloyee.FullName</option>
-                                    }
-                            </select>
+                           
             </nav><br />
             <div class="row">
-                
+                <a class="btn btn-xs btn-outline-success float-md-right"
+                   asp-controller="Payment" asp-action="Create">New Pay</a>
               
                 <table class="table table-striped table-dark">
                     <thead>
@@ -62,10 +58,18 @@
                                 <td>@item.NetPayment</td>
                                 <td>
                                     <a class="text-primary"
-                                   asp-controller="Employee"
-                                   asp-action="Detail"
-                                   asp-route-id="@item.Id"><i class="fas fa-bars"></i>Detail</a>
-
+                                       asp-controller="Employee"
+                                       asp-action="Preview"
+                                       asp-route-id="@item.Id">
+                                       <i class="fas fa-bars"></i>Preview Payslip
+                                    </a>
+                                    <a class="text-success"
+                                       asp-controller="Employee"
+                                       asp-action="Export"
+                                       asp-route-id="@item.Id">
+                                        <i class="fas fa-ballot"></i>
+                                         Payslip PDF
+                                    </a>
                                 </td>
 
                             </tr>

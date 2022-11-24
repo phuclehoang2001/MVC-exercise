@@ -14,6 +14,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(opts =>
 
 builder.Services.AddScoped<IEmployee, EmployeeService>();
 builder.Services.AddScoped<IPayService, PayService>();
+builder.Services.AddScoped<INationalInsuranceService, NationalInsuranceService>();
+builder.Services.AddScoped<ITaxService, TaxService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

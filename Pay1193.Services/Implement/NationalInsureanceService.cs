@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pay1193.Services.Implement
 {
-    public class NationalInsureanceService : INationalInsuranceService
+    public class NationalInsuranceService : INationalInsuranceService
     {
         private decimal NIRate;
         private decimal NIC;

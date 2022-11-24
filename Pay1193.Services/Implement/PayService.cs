@@ -42,6 +42,11 @@ namespace Pay1193.Services.Implement
             return _context.PaymentRecords.ToList();
         }
 
+        public IEnumerable<TaxYear> GetAllTaxYear()
+        {
+            return _context.TaxYears.ToList();
+        }
+
         public PaymentRecord GetById(int id)
         {
             return _context.PaymentRecords.Where(u => u.Id == id).FirstOrDefault();
@@ -84,5 +89,12 @@ namespace Pay1193.Services.Implement
         {
             return tax + nic + studentLoanRepayment + unionFees;
         }
+
+        public decimal TotalEarnings(decimal overtimeEarnings,decimal contractualEarnings)
+        {
+            return overtimeEarnings + contractualEarnings;
+        }
+        
+       
     }
 }

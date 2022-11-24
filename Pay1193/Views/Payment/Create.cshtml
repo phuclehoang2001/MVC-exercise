@@ -1,5 +1,105 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model PaymentCreateViewModel
+
+<div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a asp-controller="Payment" asp-action="Index">Pay List</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">New Pay</li>
+                </ol>
+            </nav><br />
+            <form method="post" asp-action="Create" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-row">
+                    <label>FullName</label>
+                    <select asp-for="EmloyeeId" class="form-control">
+                        @foreach (var item in ViewBag.emloyees)
+                        {
+                            <option value="@item.Id">@item.FullName</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-2">     
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-1">
+                        <label asp-for="PayMonth"></label>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="month" class="form-control" asp-for="PayDate" />
+                        <span asp-validation-for="PayMonth" class="text-danger"></span>
+                    </div>
+                  
+                    <div class="form-group col-md-1">
+                        <label asp-for="TaxYear"></label>
+                    </div>
+                    <div class="form-group col-md-3">
+                        
+                        <select asp-for="TaxYearId" class="form-control">       
+                            @foreach (var item in ViewBag.taxYears)
+                            {
+                                <option value="@item.Id">@item.YearOfTax</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-1">
+                        <label asp-for="PayDate"></label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <input type="date" class="form-control" asp-for="PayDate" />
+                        <span asp-validation-for="PayDate" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label asp-for="HourlyRate"></label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <input type="text" class="form-control" asp-for="HourlyRate" placeholder="0.00" />
+                        <span asp-validation-for="HourlyRate" class="text-danger"></span>
+                    </div>
+                 
+                    <div class="form-group col-md-2">
+                        <label asp-for="HoursWorked"></label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <input type="text" class="form-control" asp-for="HoursWorked" placeholder="0.00" />
+                        <span asp-validation-for="HoursWorked" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label asp-for="ContractualHours"></label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <input type="text" class="form-control" asp-for="ContractualHours" placeholder="0.00" />
+                        <span asp-validation-for="ContractualHours" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-secondary btn-rounded float-left" style="margin-right:auto.7em">Compute & Save</button>
+                    <a asp-controller="Payment" asp-action="Index" class="btn btn-primary btn-rounded float-right" style="margin-right:auto.7em">Back to Pay List</a>
+                    <br />
+                    <br />
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_validationScriptsPartial");
+    }
+    }
