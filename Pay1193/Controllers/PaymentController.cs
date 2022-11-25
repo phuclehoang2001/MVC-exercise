@@ -59,7 +59,7 @@ namespace Pay1193.Controllers
             if (ModelState.IsValid)
             {
                 decimal overtimeHours = _payService.OverTimeHours(model.HoursWorked, model.ContractualHours);
-                decimal contractualEarnings = _payService.ContractualEarning(model.ContractualEarnings, model.HoursWorked, model.HourlyRate);
+                decimal contractualEarnings = _payService.ContractualEarning(model.ContractualHours, model.HoursWorked, model.HourlyRate);
                 decimal overtimeEarnings = _payService.OvertimeEarnings(_payService.OvertimeRate(model.HourlyRate), overtimeHours);
                 decimal totalEarnings = _payService.TotalEarnings(overtimeEarnings,contractualEarnings);
                 decimal tax = _taxService.TaxAmount(totalEarnings);

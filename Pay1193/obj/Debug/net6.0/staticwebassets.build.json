@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3uGa32jvdH3jp4ySX3GZ0kzbqZ2+dWEuSivOrXf0xrs=",
+  "Hash": "C8kmE3jMO4cHelIjOfdN5e1Aw9hZIjABuwVG9mWv7DM=",
   "Source": "Pay1193",
   "BasePath": "_content/Pay1193",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\employees\\220531823_your bby gurl_ on TikTok.jfif"
+    },
+    {
+      "Identity": "E:\\document\\MVC\\Excersice\\payment\\MVC-exercise\\Pay1193\\wwwroot\\images\\employees\\2208392881 (3).jpg",
+      "SourceId": "Pay1193",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\document\\MVC\\Excersice\\payment\\MVC-exercise\\Pay1193\\wwwroot\\",
+      "BasePath": "_content/Pay1193",
+      "RelativePath": "images/employees/2208392881 (3).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\employees\\2208392881 (3).jpg"
     },
     {
       "Identity": "E:\\document\\MVC\\Excersice\\payment\\MVC-exercise\\Pay1193\\wwwroot\\images\\employees\\221450547human.jpg",
