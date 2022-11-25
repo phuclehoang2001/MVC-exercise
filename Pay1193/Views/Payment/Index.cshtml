@@ -57,18 +57,11 @@
                                 <td>@item.TotalDeduction</td>
                                 <td>@item.NetPayment</td>
                                 <td>
-                                    <a class="text-primary"
-                                       asp-controller="Employee"
-                                       asp-action="Preview"
-                                       asp-route-id="@item.Id">
-                                       <i class="fas fa-bars"></i>Preview Payslip
+                                    <a class="text-success" asp-action="Payslip" asp-route-id="@item.Id">
+                                        <i class="fas fa-bars"></i> Preview Payslip
                                     </a>
-                                    <a class="text-success"
-                                       asp-controller="Employee"
-                                       asp-action="Export"
-                                       asp-route-id="@item.Id">
-                                        <i class="fas fa-ballot"></i>
-                                         Payslip PDF
+                                    <a class="text-danger" asp-action="Export" asp-route-id="@item.Id">
+                                        <i class="fas fa-file-pdf"></i>  Payslip Pdf
                                     </a>
                                 </td>
 

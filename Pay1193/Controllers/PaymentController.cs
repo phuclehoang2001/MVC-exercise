@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Pay1193.Entity;
 using Pay1193.Models;
 using Pay1193.Services;
@@ -95,6 +96,47 @@ namespace Pay1193.Controllers
             ViewBag.emloyees = _emloyeeService.GetAll();
             ViewBag.taxYears = _payService.GetAllTaxYear();
             
+            return View(model);
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult Payslip(int id)
+        {
+            var paymentRecord = _payService.GetById(id);
+            if (paymentRecord == null)
+            {
+                return NotFound();
+            }
+
+            var model = new PaymentDetailViewModel()
+            {
+                Id = paymentRecord.Id,
+                EmployeeId = paymentRecord.EmployeeId,
+                FullName = _emloyeeService.GetById(paymentRecord.EmployeeId).FullName,
+                NiNo = _emloyeeService.GetById(paymentRecord.EmployeeId).NationalInsuranceNo,
+                PayDate = paymentRecord.DatePay,
+                PayMonth = paymentRecord.MonthPay,
+                TaxYearId = paymentRecord.TaxYearId,
+                Year = _payService.GetTaxYearById(paymentRecord.TaxYearId).YearOfTax,
+                TaxCode = paymentRecord.TaxCode,
+                HourlyRate = paymentRecord.HourlyRate,
+                HoursWorked = paymentRecord.HourWorked,
+                ContractualHours = paymentRecord.ContractualHours,
+                OvertimeHours = paymentRecord.OvertimeHours,
+                OvertimeRate = _payService.OvertimeRate(paymentRecord.HourlyRate),
+                ContractualEarnings = paymentRecord.ContractualEarnings,
+                OvertimeEarnings = paymentRecord.OvertimeEarnings,
+                Tax = paymentRecord.Tax,
+                NIC = paymentRecord.NiC,
+                UnionFee = paymentRecord.UnionFee,
+                SLC = paymentRecord.SLC,
+                TotalEarnings = paymentRecord.TotalEarnings,
+                TotalDeduction = paymentRecord.TotalDeduction,
+                Employee = paymentRecord.Employee,
+                TaxYear = paymentRecord.TaxYear,
+                NetPayment = paymentRecord.NetPayment
+            };
             return View(model);
         }
     }
